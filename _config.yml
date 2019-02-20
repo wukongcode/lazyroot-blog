@@ -78,4 +78,6 @@ theme: lazyroot
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:wukongcode/wukongcode.github.io.git
+  branch: master
