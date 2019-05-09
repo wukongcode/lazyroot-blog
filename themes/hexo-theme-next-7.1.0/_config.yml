@@ -321,7 +321,7 @@ read_more_btn: false
 # Post meta display settings
 post_meta:
   item_text: false
-  created_at: false
+  created_at: true
   updated_at:
     enable: false
     another_day: false
