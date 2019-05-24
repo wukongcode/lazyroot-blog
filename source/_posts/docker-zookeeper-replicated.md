@@ -21,7 +21,7 @@ tags:
 
 直接通过*docker image pull*拉取Zookeeper Image即可，我这里拉取3.4.14版本，你也可以根据自己的需求拉取其他版本：
 
-![获取Zookeeper镜像](/images/2019/docker-zookeeper-pull.png)
+![](/images/2019/docker-zookeeper-pull.png)
 
 # 配置文件
 
@@ -29,7 +29,7 @@ tags:
 
 因此，我在本地机器上新建一个*docker-compose.yaml*文件。同时为了对Zookeeper集群数据做相关的备份，我建立了一个data目录以免删除Docker 容器之后集群数据就丢失了。最终的文件结构如图所示：
 
-![文件结构](/images/2019/docker-zookeeper-directory.png)
+![](/images/2019/docker-zookeeper-directory.png)
 
 编写的*docker-compose.yaml*配置文件内容如下：
 
@@ -84,25 +84,25 @@ services:
 
 编写完*docker-compose.yaml*文件之后则可以启动Zookeeper集群了，可以在*docker-compose.yaml*文件所在目录下直接执行*docker-compose up*启动集群，也可以通过*docker-compose -f docker-compose.yaml up*指定配置文件启动。
 
-![启动Zookeeper集群](/images/2019/docker-zookeeper-up.png)
+![](/images/2019/docker-zookeeper-up.png)
 
 执行启动命令后，可以看到控制台输出了很多日志信息，我们可以直接使用*ctr + c*来终止运行，下次再次启动时直接使用*docker-compose start*即可，这样服务就在后台运行了；之后可以使用*docker-compose stop*来停止运行。
 
-![停止和启动集群](/images/2019/docker-zookeeper-start-stop.png)
+![](/images/2019/docker-zookeeper-start-stop.png)
 
 启动集群后，可以查看本机data目录下多了myid等文件数据，说明正确地将集群数据保存到本机了。
 
-![Zookeeper数据](/images/2019/docker-zookeeper-data.png)
+![](/images/2019/docker-zookeeper-data.png)
 
 # 集群操作
 
 集群启动后，可以通过*docker-compose ps*来查看集群的状态信息：
 
-![docker-compose ps](/images/2019/docker-zookeeper-ps.png)
+![](/images/2019/docker-zookeeper-ps.png)
 
 当然也可以通过*docker-compose logs*来查看集群的日志信息，有关*docker-compose*命令的更多使用这里就不一一介绍了，感兴趣的读者可以阅读[Docker Compose官方文档](https://docs.docker.com/compose/)。
 
 最后，我们可能需要登录到Zookeeper集群做一些维护性的工作，之前提到过集群启动时会绑定到当前机器的2181、2182和2183端口，因此，我们只需要在本机使用zkCli.sh登录到集群即可。
 
-![登录到Zookeeper集群](/images/2019/docker-zookeeper-client.png)
+![](/images/2019/docker-zookeeper-client.png)
 
