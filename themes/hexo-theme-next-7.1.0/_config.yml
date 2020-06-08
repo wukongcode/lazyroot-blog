@@ -159,9 +159,9 @@ baidu_push: true
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
   categories: /categories/ || th
-  #archives: /archives/ || archive
+  tags: /tags/ || tags
+  archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -178,8 +178,8 @@ menu_settings:
 
 # Schemes
 #scheme: Muse
-scheme: Mist
-#scheme: Pisces
+#scheme: Mist
+scheme: Pisces
 #scheme: Gemini
 
 
@@ -276,7 +276,7 @@ back2top:
   # Back to top in sidebar.
   sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: true
+  scrollpercent: false
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -311,7 +311,7 @@ excerpt_description: true
 # Automatically Excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
+  enable: false
   length: 100
 
 # Read more button
@@ -455,7 +455,7 @@ font:
   global:
     external: true
     family: Lato
-    size:
+    size: 
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
   # Fallback to `global` font settings.
